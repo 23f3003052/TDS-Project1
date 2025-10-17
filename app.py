@@ -8,9 +8,6 @@ app = Flask(__name__)
 # Store your secret (in production, use environment variables)
 MY_SECRET = os.environ.get('MY_SECRET', 'your-secret-here')
 
-@app.route('/')
-def home():
-    return "Welcome to my Project 1 app!"
 
 
 @app.route('/api-endpoint', methods=['POST'])
