@@ -6,7 +6,7 @@ from build_deploy import build_and_deploy, revise_and_deploy
 app = Flask(__name__)
 
 # Store your secret (in production, use environment variables)
-MY_SECRET = os.environ.get('MY_SECRET', 'your-secret-here')
+MY_SECRET = os.environ.get('MY_SECRET', 'itsme')
 
 
 

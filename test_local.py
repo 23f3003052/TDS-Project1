@@ -2,12 +2,12 @@ import requests
 import json
 
 # Your local API endpoint
-url = "https://tds-project1-mq1b.onrender.com"
+url = "https://tds-project1-mq1b.onrender.com/api-endpoint"
 
 # Test request
 payload = {
     "email": "[email protected]",
-    "secret": "your-secret-here",
+    "secret": "itsme",
     "task": "test-app-001",
     "round": 1,
     "nonce": "test-nonce-123",
@@ -24,4 +24,7 @@ payload = {
 response = requests.post(url, json=payload)
 
 print(f"Status Code: {response.status_code}")
-print(f"Response: {response.json()}")
+try:
+    print(f"Response: {response.json()}")
+except Exception as e:
+    print("Raw response:", response.text)
